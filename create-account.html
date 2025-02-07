@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/fit-black-icon.png">
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css">
+
+  <!-- fontawesome link -->
+  <script src="https://kit.fontawesome.com/026ee307aa.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>FitPro</title>
+</head>
+
+<body class="createAccountBody">
+  <nav class="navbar navbar-expand-lg w-100 position-absolute z-index-3">
+    <div class="container-fluid">
+      <a id="signInBrand" class="navbar-brand" href="">
+        <img src="img/fit-logo-w.png" class="navbar-brand-img" alt="main_logo">
+      </a>
+    </div>
+  </nav>
+  <main class="main-content create-account">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1>Create Account</h1>
+          <p>Achieve Your Fitness Goals with FitPro!</p>
+        </div>
+        <div class="card-body">
+          <form method="post" id="createAccountForm" class="createAccountForm" action="create-account.php">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" name="firstName" id="createAccFName" placeholder="First Name"
+                            aria-label="firstName" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" name="lastName" id="createAccLName" placeholder="Last Name"
+                        aria-label="lastName" required>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <input type="email" class="form-control" name="email" id="createAccEmail" placeholder="Email"
+                    autocomplete="email" aria-label="Email" required>
+            </div>
+            <div class="form-group mb-3">
+                <input type="password" class="form-control" name="password" id="createAccPassword"
+                    placeholder="Password" aria-label="Password" required>
+                <div class="password-strength" id="strengthBar"></div>
+            </div>
+            <div class="createAccBtn mb-3">
+                <button type="submit" name="signUp" class="btn btn-black btn-lg btn-lg w-50 mt-4 mb-0">Create Account</button>
+            </div>
+            <div class="haveAccount">
+                <p>Already have an account? <a href="sign-in.html" class="signInPageLink">Sign in</a></p>
+            </div>
+        </form>
+        
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <!-- jquery link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="plugins/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <!-- FullCalendar Script -->
+  <script src="plugins/fullcalendar-6.1.15/dist/index.global.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $('#createAccountForm').validate();
+
+  </script>
+
+</body>
+
+</html>

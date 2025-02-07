@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/fit-black-icon.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css">
+
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/026ee307aa.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>FitPro</title>
+</head>
+
+<body>
+    <div class="main-section contact-us">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/fit-logo-b.png" alt="fit-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="sign-in-btn">
+                        <a href="sign-in.html" class="btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar end -->
+
+        <section class="contact">
+            <div class="entry-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="banner-content">
+                                <h1>Contact Us</h1>
+                                <div class="breadcrumb-area">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-form">
+                            <div class="title">
+                                <h2>DROP US A LINE</h2>
+                            </div>
+                            <form action="contact-us.php" id="contactForm" class="contactForm" method="POST">
+                                <div class="form-group">
+                                    <label for="contactName" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="contactName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactGender" class="form-label">Gender</label>
+                                    <select name="gender" id="contactGender" class="select2 form-select">
+                                        <option value=""></option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                    <textarea name="message" id="contactMessage" class="form-control" rows="1"
+                                        required></textarea>
+                                </div>
+                                <button class="btn btn-black sendMessage">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.4361275844226!2d73.02796207598573!3d26.279958086995443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c51b4388f77%3A0x167e0d9c370cc028!2sFitPro%20Gym%20Jodhpur!5e0!3m2!1sen!2s!4v1729863229225!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="logo d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <img src="img/fit-logo-b.png" alt="footer-logo" class="w-100">
+            </a>
+            <p class="text-body-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ea
+                inventore
+                deserunt officiis, hic voluptates iste libero voluptas harum. Atque.</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+            <h4>Menu</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home <i
+                            class="fa fa-chevron-right"></i></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About <i
+                            class="fa fa-chevron-right"></i></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop <i
+                            class="fa fa-chevron-right"></i></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact <i
+                            class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-3">
+            <h4>Social Media</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://www.linkedin.com/login"
+                        class="nav-link p-0 text-body-secondary">Linkedin <i class="fa fa-chevron-right"></i></a>
+                </li>
+                <li class="nav-item mb-2"><a href="https://www.facebook.com/"
+                        class="nav-link p-0 text-body-secondary">Facebook <i class="fa fa-chevron-right"></i></a>
+                </li>
+                <li class="nav-item mb-2"><a href="https://www.instagram.com/accounts/login/?hl=en"
+                        class="nav-link p-0 text-body-secondary">Instagram <i class="fa fa-chevron-right"></i></a>
+                </li>
+                <li class="nav-item mb-2"><a href="https://github.com/" class="nav-link p-0 text-body-secondary">Github
+                        <i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <p class="text-center text-body-secondary mb-0">© 2024 FitPro, Inc</p>
+        </div>
+    </footer>
+    <!-- bootstrap link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="plugins/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

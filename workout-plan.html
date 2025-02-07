@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/fit-black-icon.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/026ee307aa.js" crossorigin="anonymous"></script>
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>FitPro</title>
+</head>
+
+<body class="g-sidenav-show bg-black">
+    <aside class="sidebar d-flex flex-column flex-shrink-0">
+        <a href="#" class="sidebar-head">
+            <div id="navbar-brand" class="navbar-brand">
+                <img src="img/fit-logo-w.png" alt="fitpro" class="w-100">
+            </div>
+            <div class="bars">
+                <i class="sidenav-toggler-line one"></i>
+                <i class="sidenav-toggler-line two"></i>
+                <i class="sidenav-toggler-line three"></i>
+            </div>
+        </a>
+        <div class=" navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link py-3 border-bottom" aria-current="page">
+                        <i class="fa fa-house"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active py-3 border-bottom">
+                        <i class="fa fa-dumbbell"></i>
+                        <span>Workout Plan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="diet-plan.html" class="nav-link py-3 border-bottom">
+                        <i class="fa fa-utensils"></i>
+                        <span>Diet Plan</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidenav-footer">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <li class="nav-item">
+                    <a href="#" class="nav-link py-3 border-bottom"><i class="fa fa-circle-info"></i>Help</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link py-3 "><i class="fa fa-right-from-bracket"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="dashboardContent" class="main-content dashboard workout-plan">
+        <header class="d-header">
+            <div class="header-content">
+                <div class="title">
+                    <span>Good Morning</span>
+                    <h2 class="mb-0">Welcome Back!</h2>
+                </div>
+                <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+                    <button class="premium btn btn-yellow">
+                        Try Premium
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="fa fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="fa fa-gear"></i></a>
+                    </li>
+                    <div class="dropdown">
+                        <a href="#" class="d-block dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <div class="main">
+            <div class="banner progress-banner">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="progress-tracker">
+                            <h3>Progress Tracker</h3>
+                            <div class="progress-container">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-label="Example with label"
+                                        style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <form action="" method="post" class="exercise_form" id="exerciseForm">
+                            <div class="form-group">
+                                <label for="exerciseInput" class="form-label">Enter Daily Exercise</label>
+                                <input type="text" placeholder="Enter exercise here..." class="form-control"
+                                    id="exerciseInput" name="exercise" required>
+                                <ul class="list-group suggestion-list" style="display:none;"></ul>
+                                <!-- Suggestions appear here -->
+                            </div>
+                            <div class="progress-button">
+                                <button type="submit" class="btn btn-yellow" id="addExerciseBtn"><i
+                                        class="fa fa-plus me-2"></i>Add
+                                    Exercise</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="first-section">
+                <div class="title">
+                    <h3>Workout Calendar</h3>
+                </div>
+                <div class="main-div">
+                    <div class="full-calendar">
+                        <div id="workoutCalendar"></div>
+                    </div>
+                    <div class="action-btns">
+                        <button type="button" class="btn btn-yellow" data-bs-toggle="modal"
+                            data-bs-target="#addEventModal">
+                            Add Workout
+                        </button>
+                    </div>
+                    <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content black">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Add Workout Plan</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"><i class="fa fa-xmark text-white"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="eventForm">
+                                        <div class="mb-3">
+                                            <label for="eventTitle" class="form-label text-white">Workout Name</label>
+                                            <input type="text" class="form-control" id="eventTitle"
+                                                placeholder="Enter event title">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="startDate" class="form-label text-white">Start Date</label>
+                                            <input type="date" class="form-control" id="startDate">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="endDate" class="form-label text-white">End Date</label>
+                                            <input type="date" class="form-control" id="endDate">
+                                        </div>
+                                        <button type="submit" class="btn btn-yellow">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="plugins/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- FullCalendar Script -->
+    <script src="plugins/fullcalendar-6.1.15/dist/index.global.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var calendar = new FullCalendar.Calendar($('#workoutCalendar')[0], {
+                initialView: 'dayGridMonth',
+                eventColor: '#FDDA1C',
+                eventTextColor: '#000',
+                timeZone: 'UTC',
+                events: loadWorkoutPlanEvents(),
+
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay',
+                },
+
+                selectable: true,
+                editable: true,
+                dayMaxEvents: true,
+            });
+
+            calendar.render();
+
+            $('#eventForm').on('submit', function (e) {
+                e.preventDefault();
+
+                var title = $('#eventTitle').val();
+                var startDate = $('#startDate').val();
+                var endDate = $('#endDate').val() || startDate;
+
+                if (title && startDate) {
+                    var newEvent = {
+                        id: new Date().getTime(),
+                        title: title,
+                        start: startDate,
+                        end: endDate,
+                        allDay: true
+                    };
+
+                    calendar.addEvent(newEvent);
+
+                    saveWorkoutPlanEvent(newEvent);
+
+                    Swal.fire({
+                        title: 'Event Added!',
+                        text: 'Your event has been added to the calendar.',
+                        icon: 'success',
+                        showConfirmButton: false,
+                    });
+
+                    $('#addEventModal').modal('hide');
+
+                    $('#eventForm')[0].reset();
+                } else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please provide both title and start date.',
+                        icon: 'error',
+                        showConfirmButton: false,
+                    });
+                }
+            });
+
+            function loadWorkoutPlanEvents() {
+                var events = localStorage.getItem('events');
+                return events ? JSON.parse(events) : [];
+            }
+
+            function saveWorkoutPlanEvent(event) {
+                var events = loadWorkoutPlanEvents();
+                events.push(event);
+                localStorage.setItem('events', JSON.stringify(events));
+            }
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
